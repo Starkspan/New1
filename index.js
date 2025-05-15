@@ -53,7 +53,6 @@ app.post('/pdf/analyze', upload.single('file'), async (req, res) => {
     const gewicht = volumen * dichte / 1000;
     const materialkosten = gewicht * kgPreis;
 
-    // Laufzeit-Schätzung (einfach)
     const laufzeitMin = 5 + Math.sqrt(l * b) * 0.02 + (d * 0.1);
     const laufzeitKosten = (laufzeitMin / 60) * 35;
 
